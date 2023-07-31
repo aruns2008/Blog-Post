@@ -1,0 +1,23 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+    data-sly-call="${clientlib.css @ categories='blogpost.footer'}" />
+
+
+<div class="getintouch">
+    <div class="getintouch__container">
+        <div class="getintouch__header-container">
+            <div class="getintouch__heading">${properties.footerTitle}</div>
+            <div class="getintouch__subhead">${properties.footNote}
+            </div>
+        </div>
+       
+        <div class="getintouch__content" data-sly-list.footerContent="${resource.getChildren}">
+            <div class="getintouch__data" data-sly-list.footericons="${footerContent.getChildren}">
+                <div class="getintouch__icon-and-text" data-sly-test.footericon="${footericons.footerIcon}">
+                    <img src="${footericon}" alt="${name}" class="getintouch__icon-image">
+                    <h5 class="getintouch__title">${footericons.footerIconText}</h5>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

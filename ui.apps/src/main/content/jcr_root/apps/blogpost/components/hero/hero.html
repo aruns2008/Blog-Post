@@ -1,0 +1,31 @@
+<link rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" 
+    data-sly-call="${clientlib.css @ categories='blogpost.hero'}"/>
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" 
+    data-sly-call="${clientlib.css @ categories='blogpost.fonts'}"/>
+
+<div class="video-background">
+  <video autoplay loop muted>
+    <source src="${properties.headerBackgroundVideo}" type="video/mp4">
+  </video>
+  <div class="video-overlay"></div>
+  <div class="hero-body">
+    <div class="hero-body-text">
+      <p class="primary-heading">${properties.primaryHeading}</p>
+      <p class="main-heading">${properties.mainHeading}</p>
+      <p class="sub-heading">${properties.subHeading}</p>
+    </div>
+    <div class="footnote">
+      <p class="hero-footer">${properties.heroFooter}</p>
+      <a href="#" class="round-button">
+        <!-- <span class="material-symbols-outlined">
+          expand_more
+        </span> -->
+      <img class="footer-img" src="/content/dam/blogpost/images/expand-more.png" alt="">
+      </a>
+    </div>
+  </div>
+</div>
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" 
+    data-sly-call="${clientlib.js @ categories='blogpost.hero'}"/>

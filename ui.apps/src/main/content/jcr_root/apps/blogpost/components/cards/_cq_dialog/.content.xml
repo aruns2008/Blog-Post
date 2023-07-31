@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Card Properties"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <card
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                        composite="true"
+                        fieldDescription="Click '+' to add Card"
+                        fieldLabel="Card Data">
+                        <field
+                            granite:class="cmp-teaser__editor-action"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            name="./cards">
+                            <items jcr:primaryType="nt:unstructured">
+                                <cardItem
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <cardHeading
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Card Heading"
+                                            name="./cardHeading"/>
+                                        <cardText
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Card Text"
+                                            name="./cardText"/>
+                                        <cardBackground
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                            allowUpload="true"
+                                            autoStart="false"
+                                            class="cq-droptarget"
+                                            fieldLabel="Footer Icon"
+                                            fileNameParameter="./fileName"
+                                            fileReferenceParameter="./cardBackground"
+                                            mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                                            multiple="false"
+                                            name="./cardBackground1"
+                                            title="Card Background"
+                                            uploadUrl="${suffix.path}"
+                                            useHTML5="true"/>
+                                    </items>
+                                </cardItem>
+                            </items>
+                        </field>
+                    </card>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

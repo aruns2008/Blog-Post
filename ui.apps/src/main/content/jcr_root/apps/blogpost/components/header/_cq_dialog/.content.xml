@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Header Properties"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <headerTitle
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Header Title"
+                        name="./headerTitle"/>
+                    <icon1Text
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Icon-1 Text"
+                        name="./icon1Text"/>
+                    <icon1Link
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldLabel="Button Link"
+                        name="./icon1Link"/>
+                    <icon2Text
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Icon-2 Text"
+                        name="./icon2Text"/>
+                    <icon2Link
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldLabel="Button Link"
+                        name="./icon2Link"/>
+                    <headerBackgroundImage
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                        allowUpload="{Boolean}true"
+                        autoStart="{Boolean}false"
+                        class="cq-droptarget"
+                        fieldLabel="Header Background Image"
+                        fileNameParameter="./fileName"
+                        fileReferenceParameter="./headerBackgroundImage"
+                        mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml,video/mp4]"
+                        multiple="{Boolean}false"
+                        name="./headerBackgroundImage1"
+                        title="Header Background Image"
+                        uploadUrl="${suffix.path}"
+                        useHTML5="{Boolean}true"/>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

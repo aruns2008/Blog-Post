@@ -1,0 +1,70 @@
+.emailbox {
+  background: #adc1b7;
+  form {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  &__body {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+
+    display: flex;
+  }
+  &__address,
+  .emailbox__subject,
+  label,
+  input {
+    padding: 20px;
+
+    display: flex;
+    justify-content: start;
+  }
+  input,
+  textarea {
+    padding: 15px 10px 10px;
+    border: 1px solid #cecece;
+    background: #f3f5f6;
+    color: #4c4c4c;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 80%;
+  }
+  @media only screen and (max-width: 700px) {
+    .emailbox__address,
+    .emailbox__subject,
+    .emailbox__body {
+      flex-direction: column;
+    }
+  }
+  &__success {
+    flex-direction: column;
+    margin-top: 100px;
+  }
+  &__submit button {
+    margin: 35px;
+    padding: 5px 25px;
+    background: transparent;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  &__return {
+    margin: 35px;
+    padding: 5px 25px;
+    background: transparent;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  &__return a {
+    color: black;
+    text-decoration: none;
+  }
+}

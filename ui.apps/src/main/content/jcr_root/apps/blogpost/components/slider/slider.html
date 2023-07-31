@@ -1,0 +1,49 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+    data-sly-call="${clientlib.css @ categories='blogpost.slider'}" />
+
+<div data-sly-use.sliderData="com.mysite.core.models.SliderModel"
+    data-sly-test.sliderBackground="${sliderData.sliderBackground}" class="slider"
+    style="background: url('${sliderBackground @ context='styleString'}')">
+    <div class="slider__content">
+<div class="slider__overlay-left"></div>
+<div class="slider__overlay-right"></div>
+        <h3 class="slider__heading" data-sly-test.sliderHeading="${sliderData.sliderHeading}">${sliderHeading}</h3>
+        <h1 class="slider__main-heading" data-sly-test.sliderMainHeading="${sliderData.sliderMainHeading}">
+            ${sliderMainHeading}</h1>
+        <p class="slider__text" data-sly-test.sliderText="${sliderData.sliderText}">${sliderText}</p>
+        <div class='slider__carousel'>
+            <ul class='slider__carousel-list' data-sly-list.sliderContent="${sliderData.slider}">
+                <li class='slider__carousel-item'
+                    style="background: url('${sliderContent.sliderCardBackground @ context='styleString'}')"
+                    data-pos='${sliderContentList.index}'>
+                    <div class="slider__carousel-item-content">
+                        <h1 class="slider__carousel-item-card-heading"
+                            data-sly-test.sliderCardHeading="${sliderContent.sliderCardHeading}">${sliderCardHeading}
+                        </h1>
+                        <p class="slider__carousel-item-card-text"
+                            data-sly-test.sliderCardText="${sliderContent.sliderCardText}">${sliderCardText}</p>
+                    </div>
+                    <div class="slider__carousel-item-card-button-container"><button
+                            class="slider__carousel-item-card-button"
+                            data-sly-test.cardButtonText="${sliderContent.sliderCardButtonText}">${cardButtonText}</button>
+                    </div>
+                  </div>
+                </li>
+            </ul>
+
+    </div>
+    <div class="slider__dots-container" data-position='${sliderContentList.index}'>
+
+    </div>
+    <div class="slider__vertical-line">verticla</div>
+    <h3 class="slider__footer-heading">${sliderData.footerHeading}</h3>
+    <div class="slider__footer-button"><button
+            class="slider__footer-button-text">${sliderData.footerButtonText}</button></div>
+</div>
+
+
+</div>
+
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+    data-sly-call="${clientlib.js @ categories='blogpost.slider'}" />

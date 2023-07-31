@@ -1,0 +1,144 @@
+.quotes {
+  width: 100%;
+  height: 700px;
+  background: #333333;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+
+  &__slider {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+  }
+  &__card {
+    width: 450px;
+    height: 500px;
+  }
+  &__card-content {
+    height: 100%;
+    position: relative;
+  }
+  &__quote {
+    height: 100%;
+  }
+
+  &__slides {
+    display: flex;
+    height: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+  &__slides::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  &__slides::-webkit-scrollbar-thumb {
+    display: none;
+  }
+  &__slides::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &__slides > div {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    margin-right: 50px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: #eee;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  &__slides p {
+    padding: 0px 40px;
+    text-align: left;
+    font-size: 16px;
+    color: white;
+    font-family: sans-serif;
+  }
+  &__quote-topBar {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    height: 40px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    width: 55%;
+  }
+  &__quote-count {
+    display: flex;
+    margin: 0;
+    top: 0;
+    position: absolute;
+    width: 36%;
+    justify-content: end;
+    align-items: center;
+    height: 40px;
+    border-top-left-radius: 10px;
+  }
+
+  &__quote-topBar:hidden + .quotes__quote-count {
+    display: none;
+  }
+  &__quote-topBar-text {
+    position: absolute;
+    left: 4%;
+    z-index: 1;
+    color: white;
+  }
+  &__author-text {
+    font-style: italic;
+  }
+
+  &__card-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 25px;
+    width: 90%;
+    margin-top: -75px;
+    position: absolute;
+  }
+  &__card-buttons-container {
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    border: 2px solid #525f6e;
+    cursor: pointer;
+  }
+  &__card-buttons-container img {
+    width: 16px;
+    margin: 12px;
+  }
+  &__image {
+    border-radius: 85px;
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+  }
+
+  &__image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__double-quote-symbol {
+    padding-left: 25px;
+  }
+}

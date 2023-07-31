@@ -1,0 +1,47 @@
+
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+    data-sly-call="${clientlib.css @ categories='blogpost.quotes'}" />
+
+<sly data-sly-use.quotescard="com.mysite.core.models.QuotesModel" class="quotes">
+    <div class="quotes__card">
+        <div class="quotes__card-content">
+            
+            <div class="quotes__quote-topBar"
+                style="background-color: ${quotescard.topBarColor @ context='styleString'}" >
+                <p class="quotes__quote-topBar-text">of <span> </span> ${quotescard.numberOfQuotes}</p>
+            </div>
+
+            <div class="quotes__quote">
+                <div class="quotes__slider">
+                    <div class="quotes__slides" data-slide-index="1">                      
+                        <sly data-sly-list.quote="${quotescard.quotes}">
+                            <div class="mySlides quotes__slide ${quoteList.index} ${quoteList.index == 0 ? 'active' : ''}"
+                                style="background-color: ${quotescard.quoteColor @ context='styleString'}">                                 
+                                <p class="quotes__quote-count"
+                                    style="background-color: ${quotescard.topBarColor @ context='styleString'}">
+                                    ${quoteList.count}</p>
+                                <div class="quotes__image-container"><div class="quotes__image" style="background-image:url('${quote.image @ context='styleString'}')"></div></div>
+                                <img class="quotes__double-quote-symbol" src="/content/dam/quote-component/quote.svg" alt="">
+                                <p class="quotes__quote-text">${quote.quote}</p>
+                                <p class="quotes__author-text">- ${quote.author}</p>
+                            </div>
+                        </sly>
+                    </div>
+
+
+                    <div class="quotes__card-buttons">
+                        <div class="quotes__card-buttons-container prev" onclick="changeSlide(event,-1)"><img
+                                src="${quotescard.prevIcon}" alt=""></div>
+                        <div class="quotes__card-buttons-container next" onclick="changeSlide(event,    1)"><img
+                                src="${quotescard.nextIcon}" alt=""></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</sly>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+    data-sly-call="${clientlib.js @ categories='blogpost.quotes'}" />

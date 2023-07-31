@@ -1,0 +1,22 @@
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+  data-sly-call="${clientlib.css @ categories='blogpost.cards'}" />
+
+<div class="card" data-sly-list.cardData="${resource.getChildren}">
+  <div class="card__container" data-sly-list.cardContent="${cardData.getChildren}">
+
+    <div class="card__container-box">
+      <div class="card__image" data-sly-test.cardImage="${cardContent.cardBackground}"
+        style="background-image:url('${cardImage @ context='styleString'}')">
+        <div class="card__image-tile">
+          <div class="card__overlay">
+            <h3 class="card__heading card__heading--yellow-text" data-sly-test.cardHeading="${cardContent.cardHeading}">
+              ${cardHeading}<br></h3>
+            <p class="card__description" data-sly-test.cardText="${cardContent.cardText}">${cardText}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

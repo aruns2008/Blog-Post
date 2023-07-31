@@ -1,0 +1,36 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+    data-sly-call="${clientlib.css @ categories='blogpost.benefits'}" />
+
+<div data-sly-use.benefitsData="com.mysite.core.models.BenefitsModel" class="benefits__main">
+    <div class="benefits__section-heading">
+        <h1 data-sly-test.sectionHeading="${benefitsData.sectionHeading}">${sectionHeading}</h1>
+    </div>
+
+    <div class="benefits__list-container">
+        <div data-sly-list.benefit="${benefitsData.benefits}" class="benefits__list">
+
+            <div class="benefits ${ benefitList.odd ? 'even' : '' }" data-benefit-index="${benefitList.index}">
+                <div class="benefits__container">
+                    <div class="benefits__dotted-line"></div>
+                    <div class="benefits__content">
+                        <div class="benefits__text-box">
+                            <div class="benefits__heading" data-sly-test.benefitsHeading="${benefit.benefitsHeading}">
+                                ${benefitsHeading}</div>
+                            <div class="benefits__text" data-sly-test.benefitText="${benefit.benefitsText}">
+                                ${benefitText}
+                            </div>
+                        </div>
+                        <div class="benefits__icon">
+                            <img data-sly-test.icon="${benefit.benefitsIcon}" src="${icon}" alt="Benefit Icon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="benefits__footer-heading"><button class="benefits__footer-heading-button"
+            data-sly-test.button="${benefitsData.footerHeading}">${button}</button></div>
+</div>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+    data-sly-call="${clientlib.js @ categories='blogpost.benefits'}" />

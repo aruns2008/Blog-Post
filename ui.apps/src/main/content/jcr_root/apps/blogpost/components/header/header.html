@@ -1,0 +1,64 @@
+<!--/*
+    Copyright 2015 Adobe Systems Incorporated
+  
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+  
+        http://www.apache.org/licenses/LICENSE-2.0
+  
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+*/-->
+<!-- <div class="cmp-helloworld" data-cmp-is="helloworld">
+    <h2 class="cmp-helloworld__title">Hello World Component</h2>
+    <div class="cmp-helloworld__item" data-sly-test="${properties.text}">
+        <p class="cmp-helloworld__item-label">Text property:</p>
+        <pre class="cmp-helloworld__item-output" data-cmp-hook-helloworld="property">${properties.text}</pre>
+    </div>
+    <div class="cmp-helloworld__item" data-sly-use.model="com.mysite.core.models.HelloWorldModel" data-sly-test="${model.message}">
+        <p class="cmp-helloworld__item-label">Model message:</p>
+        <pre class="cmp-helloworld__item-output"data-cmp-hook-helloworld="model">${model.message}</pre>
+    </div>
+</div> -->
+
+
+
+<main class='container'>
+  <div class='slider'>
+    <ion-icon class='slider-arrow arrow-left' name="chevron-back-outline"></ion-icon>
+    <ion-icon class='slider-arrow arrow-right' name="chevron-forward-outline"></ion-icon>
+    <ul class='slider-track'>
+      <li class='slider-slide'><ion-icon class='slider-icon' name="ellipse-outline"></ion-icon></li>
+      <li class='slider-slide'><ion-icon class='slider-icon' name="triangle-outline"></ion-icon></li>
+      <li class='slider-slide'><ion-icon class='slider-icon' name="square-outline"></ion-icon></li>
+    </ul>
+  </div>
+  <nav class='slider-interface'>
+    <ul class='slider-dots'>
+      <li class='slider-dot'></li>
+      <li class='slider-dot'></li>
+      <li class='slider-dot'></li>
+    </ul>
+  </nav>
+</main>
+
+<header data-sly-use.header="com.mysite.core.models.Header" class="header" style="background-image:url('${header.headerBackgroundImage @ context='styleString'}')">
+
+	<div class="brand-box">
+        <h1 class="heading-primary">
+			<span class="heading-primary-main">${header.title}</span>
+		</h1>
+	</div>
+	
+	<div class="text-box">	
+
+		<a href="${header.Icon1Link}" class="btn btn-white btn-animated">${header.icon1Text}</a>
+        <a href="${header.Icon2Link}" class="btn btn-white btn-animated"> ${header.icon2Text}</a>
+	</div>
+</header>
+
+

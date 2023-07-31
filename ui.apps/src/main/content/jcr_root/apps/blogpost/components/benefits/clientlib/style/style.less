@@ -1,0 +1,157 @@
+.benefits__main {
+  background: rgba(31, 29, 34, 255);
+  color: white;
+  font-family: "Source Sans Pro", sans-serif !important;
+& .benefits {
+    display: flex;
+    justify-content: flex-end;
+    height: 147px;
+  &__section-heading {
+    text-align: center;
+    font-size: 26px;
+    display: flex;
+    justify-content: center;
+    padding-top: 75px;
+    padding-bottom: 15px;
+  }
+  &__section-heading h1 {
+    width: 45%;
+    line-height: 1.04;
+  }
+  &__list-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+    &__heading {
+      color: #fc0;
+      text-transform: uppercase;
+      font-size: 28px;
+      font-weight: 600;
+    }
+    &__content {
+      display: flex;
+      width: 80%;
+      text-align: left;
+      align-items: center;
+    }
+    &.even .benefits__content {
+      text-align: right;
+      padding-left: 2px;
+    }
+    &__content {
+      justify-content: space-between;
+      padding-right: 2px;
+    }
+    &.even {
+      justify-content: flex-start;
+    }
+
+    &__dotted-line {
+      position: relative;
+      height: 1.5px;
+      background-color: #878688;
+      width: 61px;
+      margin-bottom: 5px;
+    }
+    &.even .benefits__dotted-line {
+      order: 1;
+      margin-bottom: 5px;
+    }
+
+    &.even .benefits__dotted-line::before {
+      right: 0;
+      left: auto;
+    }
+    &__dotted-line::before {
+      content: "";
+      position: absolute;
+      top: -5px;
+      left: 0;
+      width: 11px;
+      height: 11px;
+      background-color: #ffffff;
+    }
+    &__container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 50.4%;
+    }
+    &.even .benefits__container {
+      width: 50.7%;
+    }
+    &__text {
+      font-size: 19px;
+      width: 270px;
+      font-weight: 600;
+    }
+    &__icon img {
+      width: 75px;
+      height: 73px;
+    }
+    &__text-box {
+      order: 1;
+      padding-right: 18px;
+    }
+    &.even .benefits__text-box {
+      order: 0;
+      padding-left: 18px;
+    }
+  }
+  .benefits__list {
+    position: relative;
+    width: 65%;
+  }
+
+  .benefits__list::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background-image: linear-gradient(to bottom, transparent 76%, #878688 50%);
+    background-position: 0 0;
+    background-size: 100% 13px;
+    background-repeat: repeat-y;
+    color: #878688;
+  }
+
+  .benefits__footer-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 136px;
+    padding-bottom: 176px;
+  }
+  .benefits__footer-heading-button {
+    background: rgba(255, 204, 0, 255);
+    border: none;
+    font-weight: 700;
+    padding: 10px 37px;
+  }
+
+
+.class-2 .benefits__dotted-line{
+  margin-bottom: -6px !important;
+}
+.class-3 .benefits__dotted-line{
+  margin-bottom: 1px !important;
+}
+.class-4 .benefits__dotted-line{
+  margin-bottom: 10px !important;
+}
+.class-5 .benefits__dotted-line{
+  margin-bottom: 16px !important;
+}
+.class-6 .benefits__dotted-line{
+  margin-bottom: -1px !important;
+}
+.class-7 .benefits__dotted-line{
+  margin-bottom: 9px !important;
+}
+.class-8 .benefits__dotted-line{
+  margin-bottom: -11px !important;
+}
+}
